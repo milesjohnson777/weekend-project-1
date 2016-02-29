@@ -30,6 +30,11 @@ function listEntries(){
 
 listEntries()
 
+function removeEntry(){
+    expense -= $(this).parseInt(person.salary/12);
+    $(this).parent().remove();
+}
+
 
 
 
