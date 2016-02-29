@@ -19,17 +19,13 @@ function allSalaries(){
         var person = entry[i];
         expense += parseInt(person.salary/12);
         console.log(person);
+        listEntries(person);
     }
 
-function listEntries(){
-    $('.container').append('<p></p>');
-    var $el = $('container').children().last();
-
-    $el.append('.container').text(person.name + ' ' + person.IDNumber + ' ' + person.jobtitle + ' ' +
-    '$' + person.salary + ' per year').append('<button class="delete">Delete Entry</button>');
+function listEntries(person){
+    $('.container').append('<p>' + person.Name + ' ' + person.IDNumber + ' ' + person.jobtitle + ' ' +
+     '$' + person.salary + ' per year </p> <button class="delete">Delete Entry</button>');
 }
-
-listEntries()
 
 function removeEntry(){
     expense -= $(this).parseInt(person.salary/12);
